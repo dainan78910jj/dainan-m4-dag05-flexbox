@@ -63,6 +63,17 @@ section {
   margin-bottom: 40px;
 }
 
+.meny-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.meny-lista article {
+  flex: 1 1 250px;
+  margin-bottom: 0;
+}
+
 /*  Step 4. Cards with Uniform Height
 Turn the `article` element into a flex container with a column layout (`flex-direction: column`).  */
 
