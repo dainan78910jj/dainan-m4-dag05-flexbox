@@ -12,7 +12,21 @@ body {
   background-color: #fffaf3;
 }
 
+/* Step 2: Header Alignment
+Turn the `header` into a flex container. 
+The heading should be on the left and the menu on the right (using `justify-content: space-between`), 
+with both vertically centered (`align-items: center`). 
+Add `flex-wrap: wrap` so that the content wraps neatly when space is limited. */
+
 header {
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: space-around; */
+  /* justify-content: space-evenly; */
+  align-items: center;
+  /* align-items: flex-start; */
+  /* align-items: flex-end; */
+  flex-wrap: wrap;
   background-color: #5b3a29;
   color: #ffffff;
   padding: 16px 24px;
@@ -22,7 +36,14 @@ header h1 {
   margin: 0 0 8px;
 }
 
+/* Step 1: Horizontal Menu
+The `nav ul` should display its links in a single row using `display: flex` and `gap: 20px`. */
+
 nav ul {
+  display: flex;
+  /* tried setting `flex-direction: column` */
+  /* flex-direction: column; */
+  gap: 20px;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -42,7 +63,12 @@ section {
   margin-bottom: 40px;
 }
 
+/*  Step 4. Cards with Uniform Height
+Turn the `article` element into a flex container with a column layout (`flex-direction: column`).  */
+
 article {
+  display: flex;
+  flex-direction: column;
   background-color: #ffffff;
   border: 1px solid #e3d5c3;
   border-radius: 8px;
@@ -67,7 +93,15 @@ article img,
   text-decoration: none;
 }
 
+/* Step 3. Footer
+Use the same technique: place the copyright line on the left and the address on the right, 
+adding a `gap` for spacing. */
+
 footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
   background-color: #2b1c14;
   color: #ffffff;
   padding: 24px;
@@ -83,7 +117,12 @@ address {
 
 /* ===== Dag 4: typografi och färg ===== */
 body {
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
   font-size: 1rem;
   line-height: 1.6;
 }
@@ -111,7 +150,11 @@ h3 {
   margin: 12px 0 8px;
 }
 
+/* Step 4. Cards with Uniform Height
+Apply `margin-top: auto` to the `.pris` (price) element so that the price always sits at the bottom of the card, regardless of the text length. */
+
 .pris {
+  margin-top: auto;
   font-weight: 700;
   color: #8c1010;
 }
@@ -196,3 +239,14 @@ legend {
   font-weight: 700;
   padding: 0 8px;
 }
+
+/* Step 5. Experimentation
+Using DevTools, change the `justify-content` property to `center`, `flex-end`, and `space-around`. 
+Experiment with `align-items` as well. 
+Add a comment explaining what each value does, using your own words. */
+
+/* justify-content defines the alignment of items along the main axis. 
+justify-content: center centers the child elements within the container along the main axis. 
+justify-content: flex-end aligns the child elements at the end of the container along the main axis. 
+justify-content: space-around distributes the child elements evenly along the main axis, with equal space around them.
+align-items defines the alignment of items along the cross axis in single row. */
